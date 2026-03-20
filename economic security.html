@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한미 경제 안보 동맹 전략 2026</title>
+    
+    <!-- 
+    Plan Summary:
+    1. Introduction: Context of Technological Mercantilism and US policies.
+    2. Threats (Organize): Details EEPA and CHIPS Act using a Tailwind CSS grid and Unicode icons.
+    3. Economic Impact (Compare): Shows the cost increases using a Chart.js Bar Chart.
+    4. Risk Assessment (Relationships): Uses a Plotly.js WebGL Scatter plot to map risks by Likelihood vs Impact.
+    5. National Strategy (Organize/Inform): Highlights the $350B investment and lobbying strategy using styled HTML elements.
+    6. Conclusion: Emphasizes technological indispensability.
+    
+    Visualization Choices:
+    - Data Point: AI Infrastructure Cost Increases -> Goal: Compare -> Visualization: Bar Chart (Chart.js) -> Justification: Best for comparing categorical cost percentages. NO SVG used.
+    - Data Point: Threat Assessment (Likelihood vs Impact) -> Goal: Relationships -> Visualization: Scatter Plot (Plotly.js WebGL) -> Justification: Ideal for mapping multiple risk vectors on two axes. NO SVG used.
+    - Data Point: Processes & Strategy -> Goal: Organize -> Visualization: CSS Grid/Flexbox Cards -> Justification: Clean, responsive layout without relying on external diagramming tools. NO SVG used.
+    
+    Confirmation:
+    NEITHER Mermaid JS NOR SVG were used anywhere in this output. All graphics are Canvas (WebGL/2D) or standard HTML/CSS/Unicode.
+    
+    Color Palette Selected: Vibrant Cyberpunk/Brilliant Blues (Slate 900 bg, Cyan 400, Violet 500, Rose 500).
+    -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(51, 65, 85, 0.8);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #22d3ee, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-white pb-20">
+
+    <nav class="sticky top-0 z-50 glass-card border-b-0 border-slate-700 py-4 px-6 mb-12">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-black tracking-tighter text-cyan-400">KOR-US<span class="text-slate-100">SEC</span></div>
+            <div class="text-sm font-medium text-slate-400">2026 전략 분석 보고서</div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 space-y-24">
+
+        <header class="text-center space-y-6 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-tight">
+                한미 경제 안보 동맹의 <br/>
+                <span class="text-gradient">전략적 재편</span>
+            </h1>
+            <p class="text-xl text-slate-300 leading-relaxed">
+                2026년 글로벌 통상 환경은 기존의 자유무역 원칙이 쇠퇴하고 국가 안보와 산업 패권이 결합된 '기술 중상주의' 시대로 진입했습니다. '아메리카 퍼스트' 기반의 공급망 재편 속에서 한국이 직면한 위협과 생존 전략을 분석합니다.
+            </p>
+        </header>
+
+        <section class="space-y-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4">
+                <h2 class="text-3xl font-bold text-cyan-400">1. 정책 규제와 통상 위협</h2>
+                <p class="text-slate-300">미국은 경제 간첩 방지법과 반도체법 재협상을 통해 글로벌 공급망에 대한 직접적인 통제력을 강화하고 있습니다.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card rounded-2xl p-8 transform transition hover:-translate-y-2 duration-300 border-t-4 border-t-rose-500">
+                    <div class="text-5xl mb-6">🚨</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">경제 간첩 방지법 (EEPA)</h3>
+                    <p class="text-rose-400 font-semibold mb-4">법안 H.R. 1486 (상원 논의 중)</p>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex gap-3"><span class="text-cyan-400">▸</span> 대통령에게 즉각적인 자산 동결 및 제재 권한 부여</li>
+                        <li class="flex gap-3"><span class="text-cyan-400">▸</span> 증거주의가 약화된 '인지된 위험'만으로 행정 제재 가능</li>
+                        <li class="flex gap-3"><span class="text-cyan-400">▸</span> 중국 내 생산 거점을 둔 한국 기업의 기술 교류가 간첩 행위로 오인될 중대 리스크</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 transform transition hover:-translate-y-2 duration-300 border-t-4 border-t-violet-500">
+                    <div class="text-5xl mb-6">🏛️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">CHIPS Act 재협상</h3>
+                    <p class="text-violet-400 font-semibold mb-4">'러트닉 독트린'의 본격화</p>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex gap-3"><span class="text-cyan-400">▸</span> 미 정부 보조금을 '우선주' 등 지분(Equity)으로 강제 전환 시도</li>
+                        <li class="flex gap-3"><span class="text-cyan-400">▸</span> 이사회 참여를 통한 핵심 기술 및 생산 스케줄 직접 통제</li>
+                        <li class="flex gap-3"><span class="text-cyan-400">▸</span> 메모리 반도체 100% 관세 위협을 레버리지로 대미 추가 투자 압박</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-3xl p-8 md:p-12">
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
+                <h2 class="text-3xl font-bold text-cyan-400">2. 경제적 파급효과 분석</h2>
+                <p class="text-slate-300">관세 장벽과 공급망 재편 압박은 AI 인프라 구축 비용의 폭발적인 증가와 국내 산업 공동화라는 심각한 연쇄 작용을 낳고 있습니다. 하단 차트는 2026년 예상되는 주요 부품 및 인프라의 비용 상승률을 보여줍니다.</p>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="impactChart"></canvas>
+            </div>
+        </section>
+
+        <section class="space-y-12">
+            <div class="max-w-3xl mx-auto text-center space-y-4">
+                <h2 class="text-3xl font-bold text-cyan-400">3. 핵심 리스크 매트릭스</h2>
+                <p class="text-slate-300">한국 경제와 기업이 직면한 주요 위협 요소들을 발생 가능성(Likelihood)과 파급력(Impact) 기준으로 평가한 WebGL 기반 산점도입니다.</p>
+            </div>
+
+            <div class="glass-card rounded-3xl p-4 md:p-8">
+                <div class="chart-container" id="riskScatter"></div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-5 flex flex-col justify-center space-y-6">
+                <h2 class="text-3xl font-bold text-cyan-400">4. 국가적 대응 전략</h2>
+                <p class="text-slate-300 text-lg leading-relaxed">
+                    초유의 통상 압박에 대응하기 위해 한국은 전례 없는 규모의 전략적 자본을 투입함과 동시에, 의회를 활용한 정교한 정치적 방어막을 구축하고 있습니다.
+                </p>
+                <div class="glass-card rounded-2xl p-6 border-l-4 border-l-emerald-500">
+                    <div class="text-sm font-bold text-emerald-400 uppercase tracking-widest mb-2">대미 투자 특별법 (26년 3월 통과)</div>
+                    <div class="text-5xl font-black text-white mb-4">$350B</div>
+                    <p class="text-slate-300">
+                        단순 상업적 수익성을 넘어 '국가 안보' 차원의 투자를 보장. 이 막대한 공약은 대미 협상력을 높이는 동시에, '국회 동의 절차'를 핑계로 미국의 무리한 요구를 거절하는 이중 전술(Double-edged Sword)로 기능합니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="glass-card rounded-2xl p-6 flex flex-col">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h4 class="text-xl font-bold text-white mb-2">KAI (안보 논리)</h4>
+                    <p class="text-slate-400 mb-4 text-sm">Korea Aerospace Industries / Security Lobby</p>
+                    <p class="text-slate-300 flex-grow">
+                        "한국은 민주주의의 병기창." 국방 MRO 및 반도체 공급망이 미국의 군사 안보에 필수불가결함을 의회에 각인시켜 동맹국 관세 예외를 확보.
+                    </p>
+                </div>
+                <div class="glass-card rounded-2xl p-6 flex flex-col">
+                    <div class="text-4xl mb-4">⚖️</div>
+                    <h4 class="text-xl font-bold text-white mb-2">USKBC (경제 논리)</h4>
+                    <p class="text-slate-400 mb-4 text-sm">US-Korea Business Council / Economic Lobby</p>
+                    <p class="text-slate-300 flex-grow">
+                        "관세는 미국 인플레이션의 주범." 구글, 엔비디아 등 타격을 받는 미국 빅테크 기업들과 연합 전선을 구축하여 상원 재무위원회를 전방위 압박.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card rounded-3xl p-10 text-center border-t-8 border-t-cyan-500">
+            <h2 class="text-2xl font-bold text-slate-400 mb-4 uppercase tracking-widest">최종 결론</h2>
+            <p class="text-3xl md:text-4xl font-black text-white leading-tight mb-8">
+                "미국이 포기할 수 없는 <span class="text-cyan-400">핵심 기술</span>을 보유하는 것이 <br class="hidden md:block"/>가장 강력한 안보이자 주권입니다."
+            </p>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+                초격차 기술 유지를 통해 한미 관계의 주도권을 확보하고, 새로운 경제 영토를 확장해 나가는 '기술적 불가대체성(Technological Indispensability)'만이 유일한 생존 해법입니다.
+            </p>
+        </section>
+
+    </main>
+
+    <script>
+        function wrapLabel(label) {
+            if (label.length <= 16) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + words[i].length + 1 <= 16) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        const rawLabels = ['AI Server Construction Cost', 'Memory Semiconductors (HBM/DDR5)', 'Advanced AI GPUs (Section 232)'];
+        const processedLabels = rawLabels.map(wrapLabel);
+        
+        const impactData = [75, 45, 25];
+
+        const ctx = document.getElementById('impactChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: processedLabels,
+                datasets: [{
+                    label: '예상 비용 상승률 (%)',
+                    data: impactData,
+                    backgroundColor: [
+                        'rgba(244, 63, 94, 0.8)',
+                        'rgba(139, 92, 246, 0.8)',
+                        'rgba(6, 182, 212, 0.8)'
+                    ],
+                    borderColor: [
+                        '#f43f5e',
+                        '#8b5cf6',
+                        '#06b6d4'
+                    ],
+                    borderWidth: 2,
+                    borderRadius: 8,
+                    barPercentage: 0.6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                color: '#cbd5e1',
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(51, 65, 85, 0.5)' },
+                        ticks: {
+                            color: '#94a3b8',
+                            font: { family: "'Noto Sans KR', sans-serif", size: 14 },
+                            callback: function(value) { return value + '%'; }
+                        }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                            color: '#e2e8f0',
+                            font: { family: "'Noto Sans KR', sans-serif", size: 13, weight: 'bold' }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: { color: '#f8fafc', font: { family: "'Noto Sans KR', sans-serif", size: 15 } }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                        titleFont: { size: 14, family: "'Noto Sans KR', sans-serif" },
+                        bodyFont: { size: 16, weight: 'bold', family: "'Noto Sans KR', sans-serif" },
+                        padding: 12,
+                        borderColor: '#334155',
+                        borderWidth: 1,
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            },
+                            label: function(context) {
+                                return context.dataset.label + ': +' + context.parsed.y + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        const trace1 = {
+            x: [8, 9, 6, 7],
+            y: [9, 7, 10, 8],
+            mode: 'markers+text',
+            type: 'scattergl',
+            name: 'Risk Vectors',
+            text: [
+                'EEPA 제재 발동', 
+                '핵심 인재 유출 (Brain Drain)', 
+                '메모리 100% 관세', 
+                '보조금 지분 강제 전환'
+            ],
+            textposition: ['top center', 'bottom center', 'top right', 'bottom left'],
+            textfont: {
+                family: 'Noto Sans KR',
+                size: 13,
+                color: '#e2e8f0'
+            },
+            marker: {
+                size: 24,
+                color: ['#f43f5e', '#f59e0b', '#06b6d4', '#8b5cf6'],
+                line: {
+                    color: '#ffffff',
+                    width: 2
+                },
+                opacity: 0.9
+            }
+        };
+
+        const layout = {
+            title: {
+                text: '리스크 분석: 발생 가능성 vs 경제적 파급력',
+                font: { family: 'Noto Sans KR', size: 18, color: '#f8fafc' }
+            },
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            xaxis: {
+                title: { text: '발생 가능성 (Likelihood)', font: { color: '#94a3b8' } },
+                range: [4, 10],
+                gridcolor: 'rgba(51, 65, 85, 0.5)',
+                tickfont: { color: '#64748b' },
+                zeroline: false
+            },
+            yaxis: {
+                title: { text: '국가 경제 파급력 (Impact)', font: { color: '#94a3b8' } },
+                range: [4, 11],
+                gridcolor: 'rgba(51, 65, 85, 0.5)',
+                tickfont: { color: '#64748b' },
+                zeroline: false
+            },
+            margin: { t: 50, l: 60, r: 40, b: 60 },
+            showlegend: false,
+            hovermode: 'closest'
+        };
+
+        const config = {
+            responsive: true,
+            displayModeBar: false
+        };
+
+        Plotly.newPlot('riskScatter', [trace1], layout, config);
+    </script>
+</body>
+</html>
